@@ -48,6 +48,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: avant plan
+  - name: Ennemis & Player
+    uniqueID: 4088013999
+    locked: 0
+  - name: UI
     uniqueID: 1703527469
     locked: 0

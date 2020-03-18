@@ -5,6 +5,7 @@ using UnityEngine;
 public class Scr_Character_Shooting : MonoBehaviour
 {
     public GameObject projectile;
+    public Transform[] shootingPos;
     private bool goodToShoot;
     public float bulletDelay;
     
@@ -17,7 +18,11 @@ public class Scr_Character_Shooting : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A) && goodToShoot == true)
         {
-            Instantiate(projectile, transform.position, Quaternion.identity);
+            foreach (Transform shootingPos in shootingPos)
+            {
+                Instantiate(projectile, shootingPos.position, Quaternion.identity);
+            }
+
             goodToShoot = false;
             StartCoroutine(BulletDelay());
         }
