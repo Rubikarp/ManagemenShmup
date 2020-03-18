@@ -16,7 +16,6 @@ public class Scr_Enemy3_Behavior : MonoBehaviour
     public float _maxHeight;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         _movingRight = true;
@@ -24,7 +23,6 @@ public class Scr_Enemy3_Behavior : MonoBehaviour
         _shootDelay = _shootDelayOrigin;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_movingRight == true && _movingDown == true)
