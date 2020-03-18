@@ -39,6 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 1005274843
+    locked: 0
+  - name: "arri\xE8re plan"
+    uniqueID: 1762757357
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: avant plan
+    uniqueID: 1703527469
     locked: 0

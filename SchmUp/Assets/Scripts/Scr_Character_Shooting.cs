@@ -8,13 +8,11 @@ public class Scr_Character_Shooting : MonoBehaviour
     private bool goodToShoot;
     public float bulletDelay;
     
-    // Start is called before the first frame update
     void Start()
     {
         goodToShoot = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.A) && goodToShoot == true)
