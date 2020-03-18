@@ -4,57 +4,77 @@ using UnityEngine;
 
 public class Scr_Enemy3_Behavior : MonoBehaviour
 {
-    public GameObject _bullet;
-    private bool _canShoot;
+    public List<GameObject> _bullets;
     private bool _movingRight;
+    private bool _movingDown;
     public float _verticalSpeed;
     public float _horizontalSpeed;
-    private float _timeForTurn;
-    public float _timeForTurnOrigin;
-    private bool _firstTurnMade;
+    private float _shootDelay;
+    public float _shootDelayOrigin;
+
+    public float _maxSide;
+    public float _maxHeight;
 
 
     // Start is called before the first frame update
     void Start()
     {
         _movingRight = true;
-        _firstTurnMade = false;
+        _movingDown = true;
+        _shootDelay = _shootDelayOrigin;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_movingRight == true)
+        if (_movingRight == true && _movingDown == true)
         {
             transform.position = new Vector2(transform.position.x + (_horizontalSpeed * Time.deltaTime), transform.position.y - (_verticalSpeed * Time.deltaTime));
         }
-        else if (_movingRight == false)
+        else if (_movingRight == false && _movingDown == true)
         {
             transform.position = new Vector2(transform.position.x - (_horizontalSpeed * Time.deltaTime), transform.position.y - (_verticalSpeed * Time.deltaTime));
         }
-
-        if (_timeForTurn > 0)
+        else if (_movingRight == true && _movingDown == false)
         {
-            _timeForTurn -= Time.deltaTime;
+            transform.position = new Vector2(transform.position.x + (_horizontalSpeed * Time.deltaTime), transform.position.y + (_verticalSpeed * Time.deltaTime));
         }
-        else if (_timeForTurn <= 0)
+        else if (_movingRight == false && _movingDown == false)
         {
-            if (_movingRight == true)
+            transform.position = new Vector2(transform.position.x - (_horizontalSpeed * Time.deltaTime), transform.position.y + (_verticalSpeed * Time.deltaTime));
+        }
+
+
+        if (transform.position.x >= _maxSide)
+        {
+            _movingRight = false;
+        }
+        if (transform.position.x <= -_maxSide)
+        {
+            _movingRight = true;
+        }
+        if (transform.position.y >= _maxHeight)
+        {
+            _movingDown = true;
+        }
+        if (transform.position.y <= -_maxHeight)
+        {
+            _movingDown = false;
+        }
+
+
+        if (_shootDelay > 0)
+        {
+            _shootDelay -= Time.deltaTime;
+        }
+        else if (_shootDelay <= 0)
+        {
+            for (int i = 0; i < _bullets.Count; i++)
             {
-                _movingRight = false;
-            }
-            else if (_movingRight == false)
-            {
-                _movingRight = true;
+                Instantiate(_bullets[i], transform.position, Quaternion.identity);
             }
 
-            _timeForTurn = _timeForTurnOrigin;
-
-            if (_firstTurnMade == false)
-            {
-                _firstTurnMade = true;
-                _timeForTurnOrigin = _timeForTurnOrigin * 2;
-            }
+            _shootDelay = _shootDelayOrigin;
         }
     }
 }
