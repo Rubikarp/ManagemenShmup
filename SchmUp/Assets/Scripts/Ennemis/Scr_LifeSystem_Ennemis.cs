@@ -6,9 +6,12 @@ public class Scr_LifeSystem_Ennemis : MonoBehaviour
     [Header("Components")]
     [SerializeField] private SpriteRenderer _SprRender = null;
     [SerializeField] private GameObject _Avatar = null;
+    [SerializeField] private Data_GameData _data = null;
 
     [Header("Vie")]
     public int _health = 5;
+    public int _scoreForKill = 100;
+    public int _scoreForDamage = 20;
 
     [Header("Invulnérabilité")]
     public float _invulnerabilityCooldown = 0.3f;
@@ -30,6 +33,8 @@ public class Scr_LifeSystem_Ennemis : MonoBehaviour
                 lifesyst.TakingDamange(10);
             }
 
+            _data._score += _scoreForKill;
+
             Destroy(gameObject);
         }
     }
@@ -38,6 +43,8 @@ public class Scr_LifeSystem_Ennemis : MonoBehaviour
     {
         if (health <= 0)
         {
+            _data._score += _scoreForKill;
+
             Destroy(_Avatar);
         }
     }
@@ -47,6 +54,8 @@ public class Scr_LifeSystem_Ennemis : MonoBehaviour
         if (!_haveTakeDamage)
         {
             _health -= damage;
+            _data._score += _scoreForDamage;
+
             _haveTakeDamage = true;
 
             StartCoroutine(DammageInvulnerability(_invulnerabilityCooldown));

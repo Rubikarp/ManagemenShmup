@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 393634469687482877}
   - component: {fileID: 393634469687482850}
-  - component: {fileID: 393634469687482851}
   - component: {fileID: 393634469687482878}
   - component: {fileID: 393634469687482879}
-  - component: {fileID: 393634469687482876}
+  - component: {fileID: 393634469687482851}
+  - component: {fileID: 5325847236833050641}
   m_Layer: 0
-  m_Name: Spaceship
+  m_Name: P_Ennemis-#1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,24 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &393634469687482851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 393634469687482848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b858c12f71e40743b71f96c11a240ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pewpew: {fileID: 8342500059917299188, guid: 5c6591cdf8b8e96419546c44918508db, type: 3}
-  _verticalSpeed: 0.2
-  _horizontalSpeed: 10
-  _shootDelayOrigin: 1.5
-  _maxSide: 31
-  _maxHeight: 16
 --- !u!50 &393634469687482878
 Rigidbody2D:
   serializedVersion: 4
@@ -150,7 +132,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.2470264, y: 3.2550287}
   m_EdgeRadius: 0
---- !u!114 &393634469687482876
+--- !u!114 &393634469687482851
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,7 +141,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 393634469687482848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6275587e394e86498c39d530e8c7641, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b858c12f71e40743b71f96c11a240ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  _pewpew: {fileID: 8342500059917299188, guid: 5c6591cdf8b8e96419546c44918508db, type: 3}
+  _verticalSpeed: 0.2
+  _horizontalSpeed: 10
+  _shootDelayOrigin: 1.5
+  _maxSide: 31
+  _maxHeight: 16
+--- !u!114 &5325847236833050641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393634469687482848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5699458e50c22204386f99899441e40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SprRender: {fileID: 393634469687482850}
+  _Avatar: {fileID: 393634469687482848}
+  _data: {fileID: 11400000, guid: 7ce0407cca4d1bf45a27783c4f598bbf, type: 2}
+  _health: 5
+  _scoreForKill: 200
+  _scoreForDamage: 20
+  _invulnerabilityCooldown: 0.3
+  _haveTakeDamage: 0

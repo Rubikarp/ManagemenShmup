@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6906957511399762624}
   - component: {fileID: 6906957511399762625}
   - component: {fileID: 6906957511399762636}
-  - component: {fileID: 6906957511399762639}
-  - component: {fileID: 6906957511399762635}
   - component: {fileID: 8955457941319507599}
+  - component: {fileID: 6906957511399762635}
+  - component: {fileID: 6906957511399762639}
   m_Layer: 0
   m_Name: P_Ennemis-#3
   m_TagString: Enemy
@@ -106,23 +106,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &6906957511399762639
-MonoBehaviour:
+--- !u!58 &8955457941319507599
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6906957511399762626}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5699458e50c22204386f99899441e40a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _SprRender: {fileID: 6906957511399762625}
-  _Avatar: {fileID: 6906957511399762626}
-  _health: 5
-  _invulnerabilityCooldown: 0.3
-  _haveTakeDamage: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.33
 --- !u!114 &6906957511399762635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,19 +141,23 @@ MonoBehaviour:
   _shootDelayOrigin: 2
   _maxSide: 31
   _maxHeight: 16
---- !u!58 &8955457941319507599
-CircleCollider2D:
+--- !u!114 &6906957511399762639
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6906957511399762626}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00571466, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.3199943
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5699458e50c22204386f99899441e40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SprRender: {fileID: 6906957511399762625}
+  _Avatar: {fileID: 6906957511399762626}
+  _data: {fileID: 11400000, guid: 7ce0407cca4d1bf45a27783c4f598bbf, type: 2}
+  _health: 5
+  _scoreForKill: 800
+  _scoreForDamage: 80
+  _invulnerabilityCooldown: 0.3
+  _haveTakeDamage: 0

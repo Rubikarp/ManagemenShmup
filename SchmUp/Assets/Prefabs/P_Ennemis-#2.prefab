@@ -176,6 +176,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _SprRender: {fileID: 3658777493736506785}
   _Avatar: {fileID: 3658777493736506789}
+  _data: {fileID: 11400000, guid: 7ce0407cca4d1bf45a27783c4f598bbf, type: 2}
   _health: 5
+  _scoreForKill: 50
+  _scoreForDamage: 5
   _invulnerabilityCooldown: 0.3
   _haveTakeDamage: 0

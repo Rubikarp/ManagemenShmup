@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51fc48f3faffc1b418106be75674b2f4, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  _credit: 120
-  _score: 0
+  _credit: 10
+  _score: 1200
   _highscoreScore: 10270000401f00007017000088130000b80b0000
   _highscoreNames:
   - ARD
