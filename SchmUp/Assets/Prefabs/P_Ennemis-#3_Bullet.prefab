@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5765136330371409572}
   - component: {fileID: 4992548966129141035}
-  - component: {fileID: 2199581337003210592}
   - component: {fileID: 8873646876271452867}
+  - component: {fileID: 6138991559030634840}
   m_Layer: 0
   m_Name: P_Ennemis-#3_Bullet (7)
   m_TagString: Untagged
@@ -83,20 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2199581337003210592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 101668045158352848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c5b88b0d567e0f4e8f00bffbc98e7a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _direction: {x: 1, y: -1, z: 0}
-  _bulletSpeed: 5
 --- !u!58 &8873646876271452867
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -113,6 +99,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
+--- !u!114 &6138991559030634840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101668045158352848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39ca0879cde93143a9a6cfcfc3c13ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _direction: {x: 0, y: -1, z: 0}
+  _maxTravellingDistance: 50
+  _bulletSpeed: 15
+  _bulletDamage: 1
 --- !u!1 &610595754058700451
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,8 +125,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7813152069968707970}
   - component: {fileID: 2918346712473040290}
-  - component: {fileID: 8876480978841820509}
   - component: {fileID: 553620163133071528}
+  - component: {fileID: 1271597814038755115}
   m_Layer: 0
   m_Name: P_Ennemis-#3_Bullet (6)
   m_TagString: Untagged
@@ -196,20 +198,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8876480978841820509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610595754058700451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c5b88b0d567e0f4e8f00bffbc98e7a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _direction: {x: 1, y: 1, z: 0}
-  _bulletSpeed: 5
 --- !u!58 &553620163133071528
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -226,6 +214,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
+--- !u!114 &1271597814038755115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610595754058700451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39ca0879cde93143a9a6cfcfc3c13ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _direction: {x: 0, y: -1, z: 0}
+  _maxTravellingDistance: 50
+  _bulletSpeed: 15
+  _bulletDamage: 1
 --- !u!1 &1855439947483569385
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,8 +240,8 @@ GameObject:
   m_Component:
   - component: {fileID: 442049639132093749}
   - component: {fileID: 7390429501710252246}
-  - component: {fileID: 6230806436661190142}
   - component: {fileID: 5169488565376409951}
+  - component: {fileID: 516251351796682517}
   m_Layer: 0
   m_Name: P_Ennemis-#3_Bullet (5)
   m_TagString: Untagged
@@ -309,20 +313,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6230806436661190142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855439947483569385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c5b88b0d567e0f4e8f00bffbc98e7a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _direction: {x: -1, y: -1, z: 0}
-  _bulletSpeed: 5
 --- !u!58 &5169488565376409951
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -339,6 +329,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
+--- !u!114 &516251351796682517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855439947483569385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39ca0879cde93143a9a6cfcfc3c13ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _direction: {x: 0, y: -1, z: 0}
+  _maxTravellingDistance: 50
+  _bulletSpeed: 15
+  _bulletDamage: 1
 --- !u!1 &4483154127160633469
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,8 +355,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1383938778281516652}
   - component: {fileID: 184483200881722834}
-  - component: {fileID: 5868338198970817084}
   - component: {fileID: 8261745387351813563}
+  - component: {fileID: 2749224579385372422}
   m_Layer: 0
   m_Name: P_Ennemis-#3_Bullet (2)
   m_TagString: Untagged
@@ -422,20 +428,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5868338198970817084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4483154127160633469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c5b88b0d567e0f4e8f00bffbc98e7a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _direction: {x: 0, y: -1, z: 0}
-  _bulletSpeed: 5
 --- !u!58 &8261745387351813563
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -452,6 +444,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
+--- !u!114 &2749224579385372422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483154127160633469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39ca0879cde93143a9a6cfcfc3c13ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _direction: {x: 0, y: -1, z: 0}
+  _maxTravellingDistance: 50
+  _bulletSpeed: 15
+  _bulletDamage: 1
 --- !u!1 &5318097199626914516
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,8 +470,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3596904667872190382}
   - component: {fileID: 6879135762138967319}
-  - component: {fileID: 2331254309411481339}
   - component: {fileID: 200956567964182452}
+  - component: {fileID: 3724844971979484234}
   m_Layer: 0
   m_Name: P_Ennemis-#3_Bullet (1)
   m_TagString: Untagged
@@ -535,20 +543,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2331254309411481339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5318097199626914516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c5b88b0d567e0f4e8f00bffbc98e7a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _direction: {x: 0, y: 1, z: 0}
-  _bulletSpeed: 5
 --- !u!58 &200956567964182452
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -565,6 +559,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
+--- !u!114 &3724844971979484234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5318097199626914516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39ca0879cde93143a9a6cfcfc3c13ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _direction: {x: 0, y: -1, z: 0}
+  _maxTravellingDistance: 50
+  _bulletSpeed: 15
+  _bulletDamage: 1
 --- !u!1 &7275198139258571579
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,8 +585,8 @@ GameObject:
   m_Component:
   - component: {fileID: 522927661472800988}
   - component: {fileID: 5798803599827331777}
-  - component: {fileID: 1747829040086434708}
   - component: {fileID: 9042403632183201725}
+  - component: {fileID: 3370788270555660494}
   m_Layer: 0
   m_Name: P_Ennemis-#3_Bullet (8)
   m_TagString: Untagged
@@ -648,20 +658,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1747829040086434708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7275198139258571579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c5b88b0d567e0f4e8f00bffbc98e7a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _direction: {x: -1, y: 1, z: 0}
-  _bulletSpeed: 5
 --- !u!58 &9042403632183201725
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -678,6 +674,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
+--- !u!114 &3370788270555660494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7275198139258571579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39ca0879cde93143a9a6cfcfc3c13ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _direction: {x: 0, y: -1, z: 0}
+  _maxTravellingDistance: 50
+  _bulletSpeed: 15
+  _bulletDamage: 1
 --- !u!1 &7376816430466397801
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,8 +738,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8554611046407770799}
   - component: {fileID: 5304228082167288753}
-  - component: {fileID: 4836579092814841897}
   - component: {fileID: 7584960903499256131}
+  - component: {fileID: 7455442471357166389}
   m_Layer: 0
   m_Name: P_Ennemis-#3_Bullet (3)
   m_TagString: Untagged
@@ -799,20 +811,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4836579092814841897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7660883160832341682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c5b88b0d567e0f4e8f00bffbc98e7a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _direction: {x: 1, y: 0, z: 0}
-  _bulletSpeed: 5
 --- !u!58 &7584960903499256131
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -829,6 +827,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
+--- !u!114 &7455442471357166389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7660883160832341682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39ca0879cde93143a9a6cfcfc3c13ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _direction: {x: 0, y: -1, z: 0}
+  _maxTravellingDistance: 50
+  _bulletSpeed: 15
+  _bulletDamage: 1
 --- !u!1 &8376375103357308008
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,8 +853,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4410186429873154397}
   - component: {fileID: 1949036426115267528}
-  - component: {fileID: 307436974609932568}
   - component: {fileID: 6338249872205620832}
+  - component: {fileID: 5407558865907181019}
   m_Layer: 0
   m_Name: P_Ennemis-#3_Bullet (4)
   m_TagString: Untagged
@@ -912,20 +926,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &307436974609932568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8376375103357308008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c5b88b0d567e0f4e8f00bffbc98e7a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _direction: {x: -1, y: 0, z: 0}
-  _bulletSpeed: 5
 --- !u!58 &6338249872205620832
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -942,3 +942,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
+--- !u!114 &5407558865907181019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8376375103357308008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39ca0879cde93143a9a6cfcfc3c13ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _direction: {x: 0, y: -1, z: 0}
+  _maxTravellingDistance: 50
+  _bulletSpeed: 15
+  _bulletDamage: 1
