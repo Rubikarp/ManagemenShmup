@@ -19,6 +19,21 @@ public class Scr_LifeSystem_Ennemis : MonoBehaviour
         IsLiving(_health);
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Scr_LifeSystem_Player lifesyst = collision.gameObject.GetComponent<Scr_LifeSystem_Player>();
+
+            if (!lifesyst._haveTakeDamage)
+            {
+                lifesyst.TakingDamange(10);
+            }
+
+            Destroy(gameObject);
+        }
+    }
+
     private void IsLiving(int health)
     {
         if (health <= 0)

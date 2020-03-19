@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6906957511399762625}
   - component: {fileID: 6906957511399762636}
   - component: {fileID: 6906957511399762638}
-  - component: {fileID: 6906957511399762639}
+  - component: {fileID: 5698055315568506309}
   - component: {fileID: 6906957511399762635}
   m_Layer: 0
   m_Name: P_Ennemis-#3
@@ -132,7 +132,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
---- !u!114 &6906957511399762639
+--- !u!114 &5698055315568506309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,10 +141,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6906957511399762626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6275587e394e86498c39d530e8c7641, type: 3}
+  m_Script: {fileID: 11500000, guid: 5699458e50c22204386f99899441e40a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  _SprRender: {fileID: 6906957511399762625}
+  _Avatar: {fileID: 6906957511399762626}
+  _health: 5
+  _invulnerabilityCooldown: 0.3
+  _haveTakeDamage: 0
 --- !u!114 &6906957511399762635
 MonoBehaviour:
   m_ObjectHideFlags: 0

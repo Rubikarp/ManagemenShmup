@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3658777493736506785}
   - component: {fileID: 3658777493736506795}
   - component: {fileID: 3658777493736506784}
-  - component: {fileID: 3658777493736506792}
   - component: {fileID: 3658777493736506790}
+  - component: {fileID: 2731710684816945678}
   m_Layer: 0
   m_Name: P_Ennemis-#2
   m_TagString: Enemy
@@ -116,7 +116,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -136,19 +136,6 @@ PolygonCollider2D:
       - {x: -0.37354147, y: -3.1162648}
       - {x: 0.34058058, y: -3.1162643}
       - {x: 2.994618, y: 1.4132001}
---- !u!114 &3658777493736506792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3658777493736506789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6275587e394e86498c39d530e8c7641, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
 --- !u!114 &3658777493736506790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,3 +162,20 @@ MonoBehaviour:
   _playerDist: 0
   _readyToDash: 1
   _isDashing: 0
+--- !u!114 &2731710684816945678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658777493736506789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5699458e50c22204386f99899441e40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SprRender: {fileID: 3658777493736506785}
+  _Avatar: {fileID: 3658777493736506789}
+  _health: 5
+  _invulnerabilityCooldown: 0.3
+  _haveTakeDamage: 0
