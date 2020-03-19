@@ -40,7 +40,7 @@ Material:
     - _EnableExternalAlpha: 0
     m_Colors:
     - Color_1AC7083F: {r: 1, g: 1, b: 1, a: 1}
-    - Vector2_1ED976C5: {r: 0, g: 1.5, b: 0, a: 0}
+    - Vector2_1ED976C5: {r: 0, g: 0.75, b: 0, a: 0}
     - Vector2_A9C77BD: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_EE97C632: {r: 5, g: 5, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

@@ -1,29 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Scr_Enemy3_BulletScript : MonoBehaviour
 {
-    public float _verticalMovement;
-    public float _horizontalMovement;
+    [Header("movement")]
+    public Vector3 _direction = Vector3.down;
+    public float _bulletSpeed = 5f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Dégât")]
+    public int _bulletDamage = 1;
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector2(transform.position.x + (_horizontalMovement * Time.deltaTime), transform.position.y + (_verticalMovement * Time.deltaTime));
+        transform.position += _direction * _bulletSpeed * Time.deltaTime;
+        _direction = _direction.normalized;
     }
 
     void OnTriggerEnter2D (Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            Scr_LifeSystem_Player lifesyst = collision.gameObject.GetComponent<Scr_LifeSystem_Player>();
+
+            if (!lifesyst._haveTakeDamage)
+            {
+                lifesyst.TakingDamange(_bulletDamage);
+            }
+
             Destroy(gameObject);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Debug.DrawRay(this.transform.position, _direction.normalized, Color.yellow);
     }
 }
