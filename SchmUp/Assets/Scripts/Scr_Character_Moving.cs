@@ -15,11 +15,16 @@ public class Scr_Character_Moving : MonoBehaviour
     */
     #endregion
 
-    [Header("Player Data")]
+    [Header("Component")]
     private Scr_InputManager _input = null;
     private Transform _transform = null;
 
+    [Header("Statistique")]
     public float _speed = 10f;
+
+    [Header("Option")]
+    public bool _mouseControl = false;
+    [Space(10)]
     public bool _teleportHorizontal = true;
     public bool _teleportVertical = false;
 
@@ -82,22 +87,34 @@ public class Scr_Character_Moving : MonoBehaviour
         #endregion
 
         #region Moving SpaceShip
-        if (_input._RightInput && _transform.position.x <= _rightUpEdge.position.x) 
-        { 
-            Move(Vector2.right, _speed); 
+        if (_mouseControl)
+        {
+            Vector3 mousePosition = Input.mousePosition;
+            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            Vector3 direction = new Vector2( mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
+
+            _transform.position += direction;
         }
-        if (_input._LeftInput && _transform.position.x >= _leftDownEdge.position.x)  
-        { 
-            Move(Vector2.left, _speed); 
+        else
+        {
+            if (_input._RightInput && _transform.position.x <= _rightUpEdge.position.x)
+            {
+                Move(Vector2.right, _speed);
+            }
+            if (_input._LeftInput && _transform.position.x >= _leftDownEdge.position.x)
+            {
+                Move(Vector2.left, _speed);
+            }
+            if (_input._DownInput && _transform.position.y >= _leftDownEdge.position.y)
+            {
+                Move(Vector2.down, _speed);
+            }
+            if (_input._UpInput && _transform.position.y <= _rightUpEdge.position.y)
+            {
+                Move(Vector2.up, _speed);
+            }
         }
-        if (_input._DownInput && _transform.position.y >= _leftDownEdge.position.y) 
-        { 
-            Move(Vector2.down, _speed); 
-        }
-        if (_input._UpInput && _transform.position.y <= _rightUpEdge.position.y) 
-        { 
-            Move(Vector2.up, _speed); 
-        }
+        
         #endregion
 
         #region Teleport when touching Edge

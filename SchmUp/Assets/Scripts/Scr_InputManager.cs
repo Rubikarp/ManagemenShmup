@@ -89,7 +89,7 @@ public class Scr_InputManager : MonoBehaviour
         }
 
         //Setting Shoot Input
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.E) || Input.GetMouseButton(0))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.E) || Input.GetButton("Fire1"))
         {
             _shootInput = true;
         }

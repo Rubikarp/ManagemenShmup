@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3658777493736506792}
   - component: {fileID: 3658777493736506790}
   m_Layer: 0
-  m_Name: P_Enemy2
+  m_Name: P_Ennemis-#2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,12 +164,14 @@ MonoBehaviour:
   _rbg: {fileID: 3658777493736506795}
   _player: {fileID: 0}
   _angleCorrection: 90
-  _moveSpeed: 12
-  _dashSpeed: 20
-  _dashInitRange: 40
-  _dashTimePrep: 1
-  _dashDuration: 1.5
-  _dashCooldown: 1.5
+  _moveSpeed: 6
+  _dashSpeed: 35
+  _dashInitRange: 25
+  _dashTimePrep: 1.5
+  _dashDuration: 0.8
+  _dashCooldown: 0.5
+  _playerDir: {x: 0, y: 0}
+  _actualMovingDir: {x: 0, y: -1}
   _playerDist: 0
   _readyToDash: 1
   _isDashing: 0

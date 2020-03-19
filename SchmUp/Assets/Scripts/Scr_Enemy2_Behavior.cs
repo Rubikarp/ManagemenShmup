@@ -18,6 +18,7 @@ public class Scr_Enemy2_Behavior : MonoBehaviour
 
     [Header("Info")]
     [SerializeField] private Vector2 _playerDir;
+    [SerializeField] private Vector2 _actualMovingDir = Vector2.down;
     [SerializeField] private float _playerDist;
     [SerializeField] private bool _readyToDash = true;
     [SerializeField] private bool _isDashing = false;
@@ -40,9 +41,10 @@ public class Scr_Enemy2_Behavior : MonoBehaviour
                 StartCoroutine(Dash(_dashSpeed, _dashTimePrep, _dashDuration, _dashCooldown));
             }
         }
-        else
+
+        if (!_isDashing)
         {
-            _rbg.position += Vector2.down * _moveSpeed * Time.deltaTime;
+            _rbg.position += _actualMovingDir * _moveSpeed * Time.deltaTime;
         }
     }
 
@@ -74,6 +76,7 @@ public class Scr_Enemy2_Behavior : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+        _actualMovingDir = dashDirection.normalized;
         _isDashing = false;
 
         yield return new WaitForSeconds(dashCooldown);

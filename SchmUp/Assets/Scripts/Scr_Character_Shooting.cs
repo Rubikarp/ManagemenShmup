@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class Scr_Character_Shooting : MonoBehaviour
 {
+    private Scr_InputManager _input = null;
+
     public GameObject projectile;
     public Transform[] shootingPos;
-    private bool goodToShoot;
+    private bool goodToShoot = true;
     public float bulletDelay;
     
     void Start()
     {
-        goodToShoot = true;
+        _input = GameObject.FindGameObjectWithTag("GameController").GetComponent<Scr_InputManager>();
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.A) && goodToShoot == true)
+        if (_input._ShootInput && goodToShoot == true)
         {
             foreach (Transform shootingPos in shootingPos)
             {
